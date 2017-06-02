@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        main{
+            text-align:center;
+            margin:auto;
+            margin-top:10%;
+            background-color:white;
+        }
+        #lmain{
+            display:inline-block;
+            border:1px solid black;
+            width:200px;
+            padding:40px;
+            background-color:#ddd;
+            margin-right:50px;
+        }
+        #rmain{
+            display:inline-block;
+            vertical-align:top;
+            visibility:hidden;
+        }
+        .errMessage{
+            color:red;
+            visibility:hidden;
+        }
+        #showTable{
+            border-collapse:collapse;
+        }
+        td{
+            border:1px solid black;
+            padding:5px;
+        }
+        th{
+            border:1px solid black;
+            padding:5px;
+            text-align:left;
+        }
+
+    </style>
+    <meta charset="utf-8" />
+</head>
+<body>
+<main>
+    <div id="lmain">
+        <input type="text" id="name_txt" placeholder="User Name" />
+        <div class="errMessage"></div>
+        <br />
+        <input type="password" id="pwd1_txt" placeholder="Enter your Password" /><div class="errMessage"></div>
+        <br />
+        <input type="password" id="pwd2_txt" placeholder="Re-enter the Password" /><div class="errMessage"></div>
+        <br />
+        <input type="text" id="fname_txt" placeholder="First Name" /><div class="errMessage"></div>
+        <br />
+        <input type="text" id="lname_txt" placeholder="Last Name" /><div class="errMessage"></div>
+        <br />
+        <input type="text" id="email_txt" placeholder="Email" /><div class="errMessage"></div>
+        <p>
+            Male
+            <input type="radio" name="Gender" value="Male" id="mgender" style="display:inline" />
+            Female
+            <input type="radio" name="Gender" value="Female" id="fgender" style="display:inline" />
+        </p>
+        <div class="errMessage" style="margin:-20px 0 10px;"></div>
+        <input type="text" id="location_txt" placeholder="Location" style="margin-top:10px;" /><div class="errMessage"></div>
+        <br />
+        <input type="button" id="registerbtn" value="Register" />
+        <input type="button" id="removebtn" value="Remove Record" />
+    </div>
+    <div id="rmain">
+        <table id="showTable">
+            <thead>
+            <tr>
+                <td>User</td>
+                <td>Password</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Gender</td>
+                <td>Location</td>
+            </tr>
+            </thead>
+            <tbody id="showBody">
+            </tbody>
+        </table>
+    </div>
+</main>
+<script src="Register.js"></script>
+</body>
+</html>

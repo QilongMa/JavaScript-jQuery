@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="view_v4.js"></script>
+    <style>
+        #tableRecord button{
+            width:60px;
+            margin-left:5px;
+            height:auto;
+        }
+        #myForm{
+            position: static;
+        }
+        #myLocations p{
+            display: inline-block;
+            margin-left: 10px;
+            padding: 2px;
+            border: 1px solid red;
+        }
+        #myLocations{
+            position: absolute;
+            width: 300px;
+            margin-top: 100px;
+            margin-left: 400px;
+        }
+        #Location{
+            width:250px;
+            height:50px;
+            border:1px solid #aaa;
+            padding: 10px;
+        }
+        #Location p{
+            display: inline-block;
+            margin-left: 10px;
+            padding: 2px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="../../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">User Detail</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="myModalBody" index="ModalIndex">
+                    <label class="col-sm-3">First Name</label><input id='ModalFirstName' class="col-sm-6" /> <p id="fnameInfo"></p><br/>
+                    <label class="col-sm-3">Last Name</label><input id='ModalLastName' class="col-sm-6" /> <p id="lnameInfo"></p><br/>
+                    <label class="col-sm-3">Email</label><input id="ModalEmail" class="col-sm-6"/>  <p id="emailInfo"></p><br/>
+                    <label class="col-sm-3">Location</label><input id="ModalLocation" class="col-sm-6"/>  <p id="locationInfo"></p><br/>
+                    <label class="col-sm-3">Phone</label><input id="ModalPhone" class="col-sm-6"/> <p id="phoneInfo"></p><br/>
+                    <label class="col-sm-3">Class</label><input id="ModalClass" class="col-sm-6"/> <p id="classInfo"></p><br/>
+                    <!--Address-->
+                    <label class="col-sm-3">Address</label> <label class="col-sm-3">Communication:</label><input id="ModalAddress1" class="col-sm-6"/><p></p><br/>
+                    <label class="col-sm-3 col-sm-offset-3">Permanent:</label><input id="ModalAddress2" class="col-sm-6"/><p></p><br/>
+                    <!--Marks-->
+                    <label class="col-sm-3">Marks</label><label class="col-sm-3">English : </label><input id="ModalMarks1" class="col-sm-6"/><p></p><br/>
+                    <label class="col-sm-3  col-sm-offset-3">Science: </label><input id="ModalMarks2" class="col-sm-6"/><p></p><br/>
+                    <label class="col-sm-3  col-sm-offset-3">Computer: </label><input id="ModalMarks3" class="col-sm-6"/><p></p><br/>
+                    <label class="col-sm-3  col-sm-offset-3">Hardware: </label><input id="ModalMarks4" class="col-sm-6"/><p></p><br/>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="saveBtn" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--User Detail Form-->
+    <form id="myForm" class="col-md-12">
+        <label class="col-md-1">First Name</label><input id='FirstName' class="col-md-2" /> <p id="fnameInfo"></p><br/>
+        <label class="col-md-1">Last Name</label><input id='LastName' class="col-md-2" /> <p id="lnameInfo"></p><br/>
+        <label class="col-md-1">Email</label><input id="Email" class="col-md-2"/>  <p id="emailInfo"></p><br/>
+        <label class="col-md-1">Location</label><div style="display: block" id="Location" class="col-md-2"></div><p id="locationInfo"></p><br/><br/><br/>
+        <label class="col-md-1">Phone</label><input id="Phone" class="col-md-2"/> <p id="phoneInfo"></p><br/>
+        <label class="col-md-1">Class</label><input id="Class" class="col-md-2"/> <p id="classInfo"></p><br/>
+        <!--Address-->
+        <label class="col-md-1">Address</label> <label class="col-md-1">Communication:</label><input id="Address1" class="col-md-2"/><p></p><br/>
+        <label class="col-md-1 col-md-offset-1">Permanent:</label><input id="Address2" class="col-md-2"/><p></p><br/>
+        <!--Marks-->
+        <label class="col-md-1">Marks</label><label class="col-md-1">English : </label><input id="Marks1" class="col-md-2"/><p></p><br/>
+        <label class="col-md-1  col-md-offset-1">Science: </label><input id="Marks2" class="col-md-2"/><p></p><br/>
+        <label class="col-md-1  col-md-offset-1">Computer: </label><input id="Marks3" class="col-md-2"/><p></p><br/>
+        <label class="col-md-1  col-md-offset-1">Hardware: </label><input id="Marks4" class="col-md-2"/><p></p><br/>
+        <!--Buttons and Add on functions-->
+        <input type="button" id="mySubmitBtn" class="col-md-offset-1" value="Add User" >
+        <input type="button" id="mySearchBtn" class="col-md-offset-1" value="Search" >
+        <input type="button" id="myPopulateBtn" class="col-md-offset-1" value="Papulate Users" >
+        <input id="num_user" style="margin-left: 10px; padding: 2px" placeholder="Users to populate!"><br/><br/>
+    </form>
+
+    <!--Location for user info-->
+    <div id="myLocations">
+        <p id="loc1" draggable="true">New York</p> <p id="loc2" draggable="true">Boston</p> <p id="loc3" draggable="true">Virgina</p>
+    </div>
+
+    <!--Fast Search based on single info-->
+    <input type="text" id="searchtxt" style="margin-left: 140px" placeholder="Search" />
+
+    <!--Options for num of records Display-->
+    <label>Select the number of records to show: </label>
+    <select id="mySelect">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    <input type="button" id="selectBtn" value="Go"/>
+
+    <br/><br />
+
+    <!--Area to display Records in Local storage-->
+    <div id="tableRecord"></div>
+
+</body>
+</html>

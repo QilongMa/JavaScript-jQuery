@@ -1,0 +1,108 @@
+[{
+  "firstname": "Arungopan",
+  "lastname": "Gopakumar",
+  "email": "arun.gopan@marlabs.com",
+  "location": ["Boston", "New York", "Virgina"],
+  "phone": "34324324323",
+  "current_class": "10th",
+  "address": {
+    "communication": "Marlabs, Piscataway, New Jersey",
+    "permanent": "Trivandrum, Kerala, India"
+  },
+  "marks": {
+    "english": "70",
+    "science": "80",
+    "computers": "90",
+    "hardware": "80"
+  }
+},
+  {
+    "firstname": "Rock Johnson",
+    "lastname": "Madu",
+    "email": "arun.dwa@marlabs.com",
+    "location": ["Boston", "New York", "Virgina"],
+    "phone": "34324324323",
+    "current_class": "10th",
+    "address": {
+      "communication": "Marlabs, Piscataway, New Jersey",
+      "permanent": "Trivandrum, Kerala, India"
+    },
+    "marks": {
+      "english": "70",
+      "science": "80",
+      "computers": "90",
+      "hardware": "80"
+    }
+  },
+  {
+    "firstname": "Fast 8",
+    "lastname": "Brain",
+    "email": "arun.dwsd@marlabs.com",
+    "location": ["Boston", "New York", "Virgina"],
+    "phone": "34324324323",
+    "current_class": "10th",
+    "address": {
+      "communication": "Marlabs, Piscataway, New Jersey",
+      "permanent": "Trivandrum, Kerala, India"
+    },
+    "marks": {
+      "english": "70",
+      "science": "80",
+      "computers": "90",
+      "hardware": "80"
+    }
+  },
+  {
+    "firstname": "Brain",
+    "lastname": "Copper",
+    "email": "arun.gopan@marlabs.com",
+    "location": ["Boston", "New York", "Virgina"],
+    "phone": "34324324323",
+    "current_class": "10th",
+    "address": {
+      "communication": "Marlabs, Piscataway, New Jersey",
+      "permanent": "Trivandrum, Kerala, India"
+    },
+    "marks": {
+      "english": "70",
+      "science": "80",
+      "computers": "90",
+      "hardware": "80"
+    }
+  },
+  {
+    "firstname": "Rock Johnson",
+    "lastname": "Madu",
+    "email": "arun.rock@marlabs.com",
+    "location": ["Boston", "New York", "Virgina"],
+    "phone": "34324324323",
+    "current_class": "10th",
+    "address": {
+      "communication": "Marlabs, Piscataway, New Jersey",
+      "permanent": "Trivandrum, Kerala, India"
+    },
+    "marks": {
+      "english": "70",
+      "science": "80",
+      "computers": "90",
+      "hardware": "80"
+    }
+  },
+  {
+    "firstname": "Kobe",
+    "lastname": "Braint",
+    "email": "arun.kobe@marlabs.com",
+    "location": ["Boston", "New York", "Virgina"],
+    "phone": "34324324323",
+    "current_class": "10th",
+    "address": {
+      "communication": "Marlabs, Piscataway, New Jersey",
+      "permanent": "Trivandrum, Kerala, India"
+    },
+    "marks": {
+      "english": "70",
+      "science": "80",
+      "computers": "90",
+      "hardware": "80"
+    }
+  }]
